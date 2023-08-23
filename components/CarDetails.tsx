@@ -4,6 +4,7 @@ import React from 'react'
 import { Fragment } from 'react';
 import { Dialog, Transition} from '@headlessui/react';
 import Image from 'next/image';
+import { generateCarImageUrl } from '@utils';
 interface CarDetailsProps {
     isOpen: boolean;
     closeModel:() => void;
@@ -35,7 +36,7 @@ const CarDetails = ({ isOpen, closeModel, car}: CarDetailsProps) => {
                     leave='ease-in duration-200' 
                     leaveFrom='opacity-100 scale-100'  
                     leaveTo='opacity-0 scale-95'>
-                        <Dialog.Panel className='relative w-full max-w-lg h-full overflow-y-auto transform    rounded-2xl bg-white text-left shadow-xsl transition-all flex flex-col gap-5 p-8'>
+                        <Dialog.Panel className='relative w-full max-w-lg h-full overflow-y-auto transform    rounded-2xl bg-white text-left shadow-xl transition-all flex flex-col gap-5 p-8'>
                             <button 
                                 type='button' 
                                 onClick={closeModel}
@@ -45,20 +46,20 @@ const CarDetails = ({ isOpen, closeModel, car}: CarDetailsProps) => {
 
                             <div className='flex-1 flex flex-col gap-3'>
                                 <div className='relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg'>
-                                    <Image src='/hero.png' alt='car model Images' fill priority className='object-contain'/>
+                                    <Image src={generateCarImageUrl(car)} alt='car model Images' fill priority className='object-contain'/>
                                 </div>
 
                                 <div className='flex gap-3'>
                                     <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                        <Image src='/hero.png' alt='car model' fill priority className='object-contain'/>
+                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
                                     </div>
 
                                     <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                        <Image src='/hero.png' alt='car model' fill priority className='object-contain'/>
+                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
                                     </div>
 
                                     <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                        <Image src='/hero.png' alt='car model' fill priority className='object-contain'/>
+                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
                                     </div>
                                 </div>
                             </div>
@@ -72,10 +73,10 @@ const CarDetails = ({ isOpen, closeModel, car}: CarDetailsProps) => {
                                     {
                                         Object.entries(car).map(([Key, value]) => (
                                             <div className='flex justify-between gap-5 w-full text-right' key={Key}>
-                                                <h4>
-                                                    {Key}
+                                                <h4 className='text-grey capitalize'>
+                                                    {Key.split("_").join(" ")}
                                                 </h4>
-                                                <p>
+                                                <p className='text-black-100 font-semibold'>
                                                     {value}
                                                 </p>
                                             </div>

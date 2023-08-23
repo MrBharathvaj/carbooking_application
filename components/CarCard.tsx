@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image';
 import { CarProps } from '@types';
 import CustomButton from './CustomButton';
-import { calculateCarRent } from '@utils';
+import { calculateCarRent, generateCarImageUrl } from '@utils';
 import CarDetails from './CarDetails';
 interface CarCardProps {
     car:CarProps;
@@ -30,7 +30,7 @@ const CarCard = ({car}: CarCardProps) => {
             </span>
         </p>
         <div className='relative w-full h-40 my-3 object-contain'>
-            <Image src='/hero.png' alt='car model Images' fill priority className='object-contain'/>
+            <Image src={generateCarImageUrl(car)} alt='car model Images' fill priority className='object-contain'/>
         </div> 
 
         <div className='relative flex w-full mt-2'>
@@ -41,6 +41,7 @@ const CarCard = ({car}: CarCardProps) => {
                         {transmission ==='a' ? 'automatic' : 'manual'}
                     </p>
                 </div>
+
 
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <Image src="/tire.svg" alt='tire image' width={20} height={20}/>
