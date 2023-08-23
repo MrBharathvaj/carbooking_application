@@ -7,5 +7,6 @@ import SearchBar from "./SearchBar";
 import SearchManufacturer from "./SearchManufacturer";
 import React from "react";
 import CarCard from "./CarCard";
-export { Hero, CustomButton, Navbar, Footer, CustomFilter, SearchBar, SearchManufacturer, CarCard }
+import CarDetails from "./CarDetails";
+export { Hero, CustomButton, Navbar, Footer, CustomFilter, SearchBar, SearchManufacturer, CarCard, CarDetails }
 
