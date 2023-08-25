@@ -40,26 +40,26 @@ const CarDetails = ({ isOpen, closeModel, car}: CarDetailsProps) => {
                             <button 
                                 type='button' 
                                 onClick={closeModel}
-                                className='absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full'>
+                                className='absolute top-2 right-2 z-10 w-fit p-2 bg-bg-emerald-600-100 rounded-full'>
                                     <Image src='/close.svg' alt='close Image' width={20} height={20} className='object-contain'/>
                             </button>
 
                             <div className='flex-1 flex flex-col gap-3'>
-                                <div className='relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg'>
+                                <div className='relative w-full h-40 bg-emerald-600 bg-center rounded-lg'>
                                     <Image src={generateCarImageUrl(car)} alt='car model Images' fill priority className='object-contain'/>
                                 </div>
 
                                 <div className='flex gap-3'>
-                                    <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
+                                    <div className='flex-1 relative w-full h-24 bg-emerald-600 rounded-lg'>
+                                        <Image src={generateCarImageUrl(car, '23')} alt='car model' fill priority className='object-contain'/>
                                     </div>
 
-                                    <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
+                                    <div className='flex-1 relative w-full h-24 bg-emerald-600 rounded-lg'>
+                                        <Image src={generateCarImageUrl(car, '33')} alt='car model' fill priority className='object-contain'/>
                                     </div>
 
-                                    <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
-                                        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain'/>
+                                    <div className='flex-1 relative w-full h-24 bg-emerald-600 rounded-lg'>
+                                        <Image src={generateCarImageUrl(car, '13')} alt='car model' fill priority className='object-contain'/>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ const CarDetails = ({ isOpen, closeModel, car}: CarDetailsProps) => {
                                     {car.make} {car.model}
                                 </h2>
                                 
-                                <div className='mt-3 flex flex-wrap gap-4'>
+                                <div className='mt-3 flex flex-wrap gap-4'> the car */
                                     {
                                         Object.entries(car).map(([Key, value]) => (
                                             <div className='flex justify-between gap-5 w-full text-right' key={Key}>
@@ -82,7 +82,7 @@ const CarDetails = ({ isOpen, closeModel, car}: CarDetailsProps) => {
                                             </div>
                                         ))
                                     }
-                                </div>
+                                </div> 
 
                             </div>
 

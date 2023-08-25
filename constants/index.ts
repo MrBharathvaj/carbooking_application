@@ -92,7 +92,7 @@ export const manufacturers = [
     {
       title: "Socials",
       links: [
-        { title: "Discord", url: "/" },
+        { title: "LinkedIn", url: "/" },
         { title: "Instagram", url: "/" },
         { title: "Twitter", url: "/" },
         { title: "Facebook", url: "/" },

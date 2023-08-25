@@ -8,5 +8,6 @@ import SearchManufacturer from "./SearchManufacturer";
 import React from "react";
 import CarCard from "./CarCard";
 import CarDetails from "./CarDetails";
-export { Hero, CustomButton, Navbar, Footer, CustomFilter, SearchBar, SearchManufacturer, CarCard, CarDetails }
+import Showmore from "./Showmore";
+export { Hero, CustomButton, Navbar, Footer, CustomFilter, SearchBar, SearchManufacturer, CarCard, CarDetails, Showmore}
 

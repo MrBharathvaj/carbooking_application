@@ -30,13 +30,11 @@
 
 .flex-between {
   @apply flex justify-between items-center;
-
 }
 
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
 }
-
 /* END: General styles */
 
 /* START: Hero styles */
@@ -45,11 +43,11 @@
 }
 
 .hero__title {
-  @apply 2xl:text-[72px] sm:text-[54px] text-[50px] font-bold;
+  @apply 2xl:text-[52px] sm:text-[54px] text-[35px] font-extrabold;
 }
 
 .hero__subtitle {
-  @apply 2xl:text-[27px] text-black-100 font-light mt-5;
+  @apply text-[23px] text-black-100 font-light mt-5;
 }
 
 .hero__image-container {
@@ -61,7 +59,7 @@
 }
 
 .hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4  bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
 }
 
 /* END: Hero styles */
@@ -80,19 +78,18 @@
   @apply flex justify-start flex-wrap items-center gap-2;
 }
 
-/* .home__cars-wrapper {
-  @apply grid 2xl:rid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
-} */
+.home__cars-wrapper {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+}
 
 .home__error-container {
   @apply mt-16 flex justify-center items-center flex-col gap-2;
 }
-
 /* END: Home styles */
 
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-emerald-100 hover:bg-white hover:shadow-md rounded-3xl;
 }
 
 .car-card__content {
@@ -134,7 +131,6 @@
 .car-card__btn-container {
   @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
 }
-
 /* END: Car Card styles */
 
 /* START: Car Details styles */
@@ -149,7 +145,6 @@
 .car-details__main-image {
   @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
 }
-
 /* END: Car Details styles */
 
 /* START: Custom Filter styles */
@@ -160,12 +155,11 @@
 .custom-filter__options {
   @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
 }
-
 /* END: Custom Filter styles */
 
 /* START: Footer styles */
 .footer {
-  @apply flex flex-col text-black-100 mt-5 border-t border-gray-100;
+  @apply flex flex-col text-black-100  mt-5 border-t border-gray-100;
 }
 
 .footer__links-container {
@@ -191,7 +185,6 @@
 .footer__copyrights-link {
   @apply flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10;
 }
-
 /* END: Footer styles */
 
 /* START: searchbar styles */
@@ -206,7 +199,6 @@
 .searchbar__input {
   @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
 }
-
 /* END: searchbar styles */
 
 /* START: search manufacturer styles */
@@ -225,5 +217,4 @@
 .search-manufacturer__option {
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
-
 /* END: search manufacturer styles */
